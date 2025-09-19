@@ -20,10 +20,12 @@ function Register() {
     e.preventDefault();
     try {
       const res = await fetch("https://tasty-kitchen-backend-1.onrender.com/api/auth/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+      credentials: "include", // ✅ important for cookies
+    });
+
 
       const data = await res.json();
       if (!res.ok) {
