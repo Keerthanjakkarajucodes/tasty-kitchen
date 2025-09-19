@@ -82,11 +82,7 @@ function Register() {
             />
             <button type="submit" className="register-button">Register</button>
           </form>
-
-          <a href="https://tasty-kitchen-backend-1.onrender.com/api/auth/google" className="google-login">
-            Signup with Google
-          </a>
-
+          
           <p className="register-switch">
             Already have an account? <Link to="/login">Login</Link>
           </p>
