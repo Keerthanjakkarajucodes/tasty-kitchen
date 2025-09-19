@@ -1,0 +1,219 @@
+/* NavBar.css */
+.navbar {
+  background-color: #f8fafc;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.home-logo {
+  padding-left: 150px;
+}
+
+.home-logo-name {
+  color: #f7931e;
+  font-weight: bold;
+  font-family: 'DM Sans';
+  padding-left: 20px;
+  font-size: 24px;
+}
+
+.profile-icon {
+  font-size: 26px;
+  color: #f7931e; /* match the brand color */
+  margin-left: 20px;
+  margin-right:0px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.15);
+}
+
+
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+}
+
+.home-button,
+.cart-button {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  padding-right: 25px;
+}
+
+.home-button {
+  color: #f7931e;
+}
+
+.logout-button {
+  background-color: #f7931e;
+  color: white;
+  border: 0;
+  font-size: 20px;
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-right: 30px;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+.cart-link-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3e0;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.cart-icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.cart-icon {
+  color: #f7931e;
+  font-size: 28px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #e50914;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 3px 6px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+/* 🔽 Mobile Adjustments */
+
+/* Mobile Navbar Styling */
+@media screen and (max-width: 768px) {
+  .home-button,
+  .cart-button,
+  .logout-button {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+    font-size: 28px;
+    margin-left: 80px;
+    margin-right:10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .home-logo {
+    padding-left: 16px;
+  }
+
+  .home-logo-name {
+    font-size: 20px;
+    padding-left: 8px;
+    padding-right: 40px;
+  }
+
+  .mobile-menu {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 12px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    z-index: 999;
+  }
+
+  .home-hamburger-button,
+  .cart-hamburger-button {
+    color: #f7931e;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 16px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .logout-hamburger-button {
+    font-size: 15px;
+    color: white;
+    background-color: #f7931e;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+   .cart-icon {
+    font-size: 24px;
+  }
+
+  .cart-icon-wrapper {
+    padding: 6px;
+  }
+
+  .cart-badge {
+    font-size: 10px;
+    min-width: 16px;
+    height: 16px;
+    top: -2px;
+    right: -2px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

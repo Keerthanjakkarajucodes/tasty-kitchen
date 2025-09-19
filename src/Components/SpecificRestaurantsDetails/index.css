@@ -1,0 +1,247 @@
+.restaurant-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url('https://i.postimg.cc/d0fx1Rx1/Frame-279.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  margin: 50px;
+  border-radius: 12px;
+}
+
+.restaurant-banner-image {
+  display: none;
+}
+
+.restaurant-info {
+  flex: 1;
+}
+
+.restaurant-info h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.restaurant-meta {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.restaurant-meta p {
+  font-weight: bold;
+}
+
+.max-limit-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+
+.food-items-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: calc(100% - 100px); /* aligns with .restaurant-banner margins */
+  margin: 0 auto 40px auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+.food-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  margin-left:25px;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+.food-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.food-details {
+  padding: 10px 0;
+  margin-left:15px;
+}
+
+.food-details h4 {
+  margin: 5px 0;
+}
+
+.star {
+  color: #fbbf24;
+  margin-bottom: 8px;
+}
+
+.add-button {
+  background-color: transparent;
+  color: #f59e0b;
+  border: 1px solid #f59e0b;
+  padding: 5px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.restaurant-image-overlay {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 100px;
+  margin-right: 30px;
+}
+.quantity-controller {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.qty-btn {
+  background-color: orange;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.qty-count {
+  font-weight: bold;
+}
+
+.page-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid orange;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 768px) {
+  /* Banner style for mobile */
+  .restaurant-banner {
+    align-items: center;
+    text-align: center;
+    background-image: url('https://i.postimg.cc/d0fx1Rx1/Frame-279.png');
+    background-size: cover;
+    height:190px;
+    width:360px;
+    margin-left:0px;
+    padding-left:0px;
+    border-radius: 20px;
+  }
+
+  .restaurant-image-overlay {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    margin-left:20px;
+  }
+
+  .restaurant-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .restaurant-info p {
+    font-size: 14px;
+    margin: 2px 0;
+
+  }
+
+  .restaurant-meta {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .restaurant-meta p {
+    font-size: 13px;
+    margin-bottom:30px;
+  }
+
+
+  /* Food list: single column, full width */
+  .food-items-list {
+    grid-template-columns: 1fr;
+    width: 95%;
+    gap: 15px;
+    padding: 0;
+    margin: 20px auto;
+  }
+
+  /* Food card: side-by-side layout */
+  .food-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+ .food-card:hover {
+    transform: scale(1.05); /* use subtle zoom */
+    transition: transform 0.2s ease;
+  }
+
+  .food-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .food-details {
+    flex: 1;
+  }
+
+  .food-details h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .food-details p {
+    font-size: 14px;
+    margin: 2px 0;
+  }
+
+  .star {
+    font-size: 14px;
+  }
+
+  .add-button {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+}

@@ -1,0 +1,72 @@
+.register-page {
+  display: flex;
+  height: 100vh;
+}
+
+.register-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.register-container {
+  width: 350px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.register-title {
+  color: #f7931e;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.register-form input {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.register-button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  border: none;
+  background-color: #f7931e;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #ff8c00;
+}
+
+.register-error {
+  color: red;
+  margin-bottom: 0.5rem;
+}
+
+.register-switch {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.register-right {
+  flex: 1;
+  background: url("/food-side.jpg") no-repeat center center/cover;
+}

@@ -1,0 +1,255 @@
+.cart-main-div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* ----------- Empty Cart ---------- */
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.empty-image {
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.order-now-btn {
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+/* ----------- Cart Items Table ---------- */
+.cart-container {
+  padding: 40px 100px;
+  flex-grow: 1;
+  background-color:white;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background-color:#0B69FF1A;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ----------- Quantity Buttons ---------- */
+.quantity-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-buttons button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #475569;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.desktop-only-quantity,
+.desktop-only-price {
+    display: table-cell; 
+}
+
+
+.quantity-buttons span {
+  font-weight: 500;
+}
+
+/* ----------- Cart Total ---------- */
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #94a3b8;
+  padding-top: 24px;
+}
+
+.cart-total p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.place-order-btn {
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.item-info-mobile-wrapper{
+  display:none;
+}
+
+/* ----------- Responsive Design ---------- */
+/* ----------- Responsive Design (Mobile) ---------- */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 20px;
+  }
+
+  .cart-table {
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 0 16px;
+    background-color: transparent; /* Remove background from table itself */
+  }
+
+  .cart-table thead {
+    display: none; /* Hide table headers on mobile */
+  }
+
+  .cart-table tr {
+    display: flex;
+    flex-direction: row; /* Keep image and info wrapper side-by-side */
+    align-items: flex-start; /* Align image and content to top */
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #0B69FF1A; /* Apply background to individual rows */
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .cart-table td {
+    border: none;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  /* Hide desktop-specific quantity and price columns on mobile */
+  .desktop-only-quantity,
+  .desktop-only-price {
+      display: none;
+  }
+
+  .item-details {
+    display: flex;
+    flex-direction: row; /* Image and content wrapper side-by-side */
+    align-items: flex-start; /* Align image and content to top */
+    gap: 12px;
+    flex: 1; /* Allow item-details to take available space */
+  }
+
+  .cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-right: 0; /* Ensure no extra margin from previous rules */
+  }
+
+  /* New style for the wrapper containing name, quantity, and price on mobile */
+  .item-info-mobile-wrapper {
+    display: flex;
+    flex-direction: column; /* THIS IS THE KEY: Stacks name, quantity, price vertically */
+    justify-content: space-between; /* Distribute space */
+    flex-grow: 1; /* Allow this wrapper to take remaining space */
+    padding-top: 5px; /* Small padding to align content with image top */
+    margin-left:25px;
+  }
+
+  .item-name-mobile {
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 8px; /* Space below name */
+  }
+
+  /* Styling for the quantity buttons specifically on mobile */
+  .quantity-buttons-mobile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px; /* Space below quantity buttons */
+  }
+
+  .quantity-buttons-mobile button {
+    width: 24px; /* Slightly larger buttons for better touch */
+    height: 24px;
+    font-size: 16px;
+    border: 1px solid #475569;
+    border-radius: 4px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; /* Center content within button */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quantity-buttons-mobile span {
+    font-weight: 500;
+  }
+
+  .item-price-mobile {
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569; /* A slightly subdued color for price */
+  }
+
+  .cart-total {
+    flex-direction: column;
+    align-items: flex-end; /* Align total to the right */
+    gap:10px;
+    margin-right:100px;
+    padding-left:10px;
+    padding-top: 24px;
+  }
+
+  .cart-total p {
+    font-size: 18px;
+  }
+
+  .place-order-btn {
+    align-self: flex-end; /* Align button to the right */
+    text-align: center;
+    margin-right:50px;
+  }
+}
